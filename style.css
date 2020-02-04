@@ -1,5 +1,9 @@
 body {
     font-family: 'Henny Penny', cursive;
+    display: block;
+    height: 100%;
+    margin: 8px;
+    text-align: center;
     
 }
 
@@ -15,6 +19,10 @@ h1, h2, p {
 
 #hint, #reset {
     display: inline-flex;
-    align-self: center;
     
+    
+}
+
+footer {
+    margin-bottom: 10px;
 }
