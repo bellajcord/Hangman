@@ -48,6 +48,12 @@ h1, h2, p {
     border: solid 1px;
 }
 
+@media (max-width: 767px) {
+    #alphabet {
+        padding: 0 0 0 15px;
+    }
+}
+
 canvas{
     color: whitesmoke;
     border: black solid 2px;

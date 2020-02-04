@@ -1,13 +1,18 @@
 
 
-// create alphabet selectors
+
 
 window.onload = function () {
 
-    //create alphabet
-    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-'s', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  //create variables
 
-
+  var categories;
+  var guess;
+  var guesses = [];
+  var chosenCategories;
+  var lives;
+  var counter;
+  var space;  
+  var getHint;
+  var word;
 }
