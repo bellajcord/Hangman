@@ -6,16 +6,12 @@ body {
     height: 100%;
     margin: 10px;
     text-align: center;
-    
+    background-image: url(IMG_8597.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
-.background {
-    background-image: url(hogwarts.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-}
 
 h1, h2, p {
     display: block;
