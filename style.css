@@ -23,29 +23,23 @@ h1, h2, p {
     
 }
 
-
 #alphabet {
-    @include clear;
-    margin:15px auto;
-    padding:0;
-    max-width:900px;
-  }
-  
-  #alphabet li {
-    float:left;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-flow:column wrap;
+    align-content: left;
+    margin: 15px auto;
+    max-width: 900px;
+    text-decoration: none;
+}
+
+#alphabet li {
+    list-style-type: none;
+    text-align: center;
     margin: 0 10px 10px 0;
-    list-style:none;
-    width:35px;
-    height:30px;
-    padding-top:10px;
-    background:$white;
-    color:$base-color;
-    cursor:pointer;
-    @include corners(5px);
-    border: solid 1px $white;
-      
-      &:hover{
-        border: solid 1px $white;
-        color:$white;
-      }
-  }
+    width: 35px;
+    height: 30px;
+    padding-top: 5px;
+    border: solid 1px;
+}
