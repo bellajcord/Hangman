@@ -23,6 +23,29 @@ h1, h2, p {
     
 }
 
-footer {
-    margin-bottom: 10px;
-}
+
+#alphabet {
+    @include clear;
+    margin:15px auto;
+    padding:0;
+    max-width:900px;
+  }
+  
+  #alphabet li {
+    float:left;
+    margin: 0 10px 10px 0;
+    list-style:none;
+    width:35px;
+    height:30px;
+    padding-top:10px;
+    background:$white;
+    color:$base-color;
+    cursor:pointer;
+    @include corners(5px);
+    border: solid 1px $white;
+      
+      &:hover{
+        border: solid 1px $white;
+        color:$white;
+      }
+  }

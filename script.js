@@ -1,3 +1,5 @@
+
+
 // create alphabet selectors
 
 window.onload = function () {
@@ -22,5 +24,6 @@ for (var i = 0; i < alphabet.length; i ++) {
     check();
     myButtons.appendChild(letters);
     letters.appendChild(list);
-}
+        }
+    }
 }
