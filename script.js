@@ -29,18 +29,8 @@ var selectCat = function () {
       catagoryName.innerHTML = "Magical Beasts!";
     }
   }
-// create and display remaining lives functinon using if and for loop
-comments = function() {
-    showLives.innerHTML = "Only" + lives + "left";
-    if (lives < 1) {
-        showLives.innerHTML = "You killed him. You're no wizard.";
-    }
-    for (var i = 0; i < guesses.length; i++) {
-        if (counter + space === guesses.length) {
-            showLives.innerHTML = "Congratulations! You might be a wizard after all!";
-        }
-    }
-}
+
+
 // guessing function
 result = function () {
     wordHolder = document.getElementById('hold');
@@ -62,4 +52,22 @@ result = function () {
       correct.appendChild(guess);
     }
   }
+
+// create and display remaining lives functinon using if and for loop
+comments = function() {
+    showLives.innerHTML = "Only" + lives + "left";
+    if (lives < 1) {
+        showLives.innerHTML = "You killed him. You're no wizard.";
+    }
+    for (var i = 0; i < guesses.length; i++) {
+        if (counter + space === guesses.length) {
+            showLives.innerHTML = "Congratulations! You might be a wizard after all!";
+        }
+    }
 }
+
+//define the hangman to be drawn
+    var animate = function() {
+        var drawMe = lives;
+        drawArray[drawMe]();
+    }

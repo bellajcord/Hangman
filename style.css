@@ -22,7 +22,18 @@ h1, h2, p {
     display: inline-flex;
     align-self: flex-end;
     float: left;
+
+        
 }
+#hint:hover {
+            background-color: white;
+            color: black;
+        }
+
+#reset:hover {
+        background-color: white;
+        color: black;
+    }
 
 #hint, #reset {
    
@@ -84,7 +95,7 @@ canvas{
     padding: 20px;
   }
 
-  button{
+  button {
     
     background: black;
     color: white;
@@ -97,8 +108,13 @@ canvas{
     margin: 10px;
     outline: none;
     
-      }
+    }
   
+.letter:hover  {
+    background-color: black;
+    color:white;
+}
+
     #mylives{
         font-size: 1.6em;
         text-align: center;
