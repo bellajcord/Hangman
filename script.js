@@ -12,6 +12,11 @@ window.onload = function () {
   var getHint;
   var word;
 
+  //retrieve elements from HTML
+  var showLives = document.getElementById("mylives");
+  var showCatagory = document.getElementById("scatagory");
+  var getHint = document.getElementById("hint");
+  var showClue = document.getElementById("clue");
 //create categories and selection function
 
 var selectCat = () {
