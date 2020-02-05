@@ -114,3 +114,30 @@ window.onload = function () {
         context.arc(60, 25, 10, 0, Math.PI*2, true);
         context.stroke();
     }
+
+    //define path from drawing
+
+    draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
+
+        context.moveTo($pathFromx, $pathFromy);
+        context.lineTo($pathTox, $pathToy);
+        context.stroke();
+    }
+//create the gallow
+    frame1 = function() {
+        draw (0, 150, 150, 150);
+    };
+
+    frame2 = function() {
+        draw (10, 0, 10, 600);
+    };
+
+    frame3 = function() {
+        draw (0, 5, 70, 5);
+    };
+
+    frame4 = function() {
+        draw (60, 5, 60, 15);
+    };
+
+    
