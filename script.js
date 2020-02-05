@@ -1,26 +1,49 @@
 window.onload = function () {
 
-  //create variables
-
-  var categories;
-  var guess;
-  var guesses = [];
-  var chosenCategories;
-  var lives;
-  var counter;
-  var space;  
-  var getHint;
-  var word;
-
-  //retrieve elements from HTML
-  var showLives = document.getElementById("mylives");
-  var showCatagory = document.getElementById("scatagory");
-  var getHint = document.getElementById("hint");
-  var showClue = document.getElementById("clue");
-
-  //create categories and selection function
-
-var selectCat = function () {
+    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+          'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+          't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    
+          //create variables
+    var categories;         
+    var chosenCategory;     
+    var getHint ;          
+    var word ;              
+    var guess ;             
+    var geusses = [ ];      
+    var lives ;             
+    var counter ;           
+    var space;              
+  
+   
+    //retrieve elements from HTM
+    var showLives = document.getElementById("mylives");
+    var showCatagory = document.getElementById("scatagory");
+    var getHint = document.getElementById("hint");
+    var showClue = document.getElementById("clue");
+  
+  
+  
+    // create alphabet ul
+    var buttons = function () {
+      myButtons = document.getElementById('buttons');
+      letters = document.createElement('ul');
+  
+      for (var i = 0; i < alphabet.length; i++) {
+        letters.id = 'alphabet';
+        list = document.createElement('li');
+        list.id = 'letter';
+        list.innerHTML = alphabet[i];
+        check();
+        myButtons.appendChild(letters);
+        letters.appendChild(list);
+      }
+    }
+      
+    
+    //create categories and selection function
+  
+  var selectCat = function () {
     if (chosenCategory === categories[0]) {
       catagoryName.innerHTML = "Test your Spell Knowledge";
     } else if (chosenCategory === categories[1]) {
@@ -29,10 +52,9 @@ var selectCat = function () {
       catagoryName.innerHTML = "Magical Beasts!";
     }
   }
-
-
-// guessing function
-result = function () {
+  
+    // guessing function
+  result = function () {
     wordHolder = document.getElementById('hold');
     correct = document.createElement('ul');
 
@@ -52,9 +74,9 @@ result = function () {
       correct.appendChild(guess);
     }
   }
-
-// create and display remaining lives functinon using if and for loop
-comments = function() {
+    
+    // create and display remaining lives functinon using if and for loop
+  comments = function() {
     showLives.innerHTML = "Only" + lives + "left";
     if (lives < 1) {
         showLives.innerHTML = "You killed him. You're no wizard.";
@@ -65,19 +87,30 @@ comments = function() {
         }
     }
 }
-
-//define the hangman to be drawn & link to lives
-    var animate = function() {
-        var drawMe = lives;
-        drawArray[drawMe]();
+  
+ //define the hangman to be drawn & link to lives
+    var animate = function () {
+      var drawMe = lives ;
+      drawArray[drawMe]();
     }
+  
+    
+// retrieve hangman elements stage canvas function    
+  canvas = function(){
+      
+        myStickman = document.getElementById("stickman");
+      context = myStickman.getContext('2d');
+      context.beginPath();
+      context.strokeStyle = "#fff";
+      context.lineWidth = 2;
+    };
 
-    // retrieve hangman elements
-canvas = function (){
+//define the drawing of the head function
 
-    myStickman = document.getElementById("stickman");
-    context = myStickman.getContext('2d');
-    context.beginPath();
-    context.strokeStyle = "#fff";
-    context.lineWidth = 2;
-};
+    head = function(){
+        myStickman = document.getElementById("stickman");
+        context = myStickman.getContext('2d');
+        context.beginPath();
+        context.arc(60, 25, 10, 0, Math.PI*2, true);
+        context.stroke();
+    }
