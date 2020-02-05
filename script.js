@@ -66,8 +66,18 @@ comments = function() {
     }
 }
 
-//define the hangman to be drawn
+//define the hangman to be drawn & link to lives
     var animate = function() {
         var drawMe = lives;
         drawArray[drawMe]();
     }
+
+    // retrieve hangman elements
+canvas = function (){
+
+    myStickman = document.getElementById("stickman");
+    context = myStickman.getContext('2d');
+    context.beginPath();
+    context.strokeStyle = "#fff";
+    context.lineWidth = 2;
+};
