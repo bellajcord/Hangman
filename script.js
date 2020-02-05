@@ -20,20 +20,20 @@ window.onload = function () {
 
   //create categories and selection function
 
-var selectCat = () {
-    if (chosenCategories === categories[0]) {
-        categoryName.innerHTML = "Test your Spell Knowledge";
-    } else if (chosenCategories === categories[1]) {
-        categoryName.innerHTML = "Do you know your characters?";
-    } else if (chosenCategories === categories[2]) {
-        categoryName.innerHTML = "Magical Beasts!";
+var selectCat = function () {
+    if (chosenCategory === categories[0]) {
+      catagoryName.innerHTML = "Test your Spell Knowledge";
+    } else if (chosenCategory === categories[1]) {
+      catagoryName.innerHTML = "Do you know your characters?";
+    } else if (chosenCategory === categories[2]) {
+      catagoryName.innerHTML = "Magical Beasts!";
     }
-}
+  }
 // create and display remaining lives functinon using if and for loop
 comments = function() {
     showLives.innerHTML = "Only" + lives + "left";
     if (lives < 1) {
-        showLives.innerHTML = "You killed him. You're no wizard";
+        showLives.innerHTML = "You killed him. You're no wizard.";
     }
     for (var i = 0; i < guesses.length; i++) {
         if (counter + space === guesses.length) {
@@ -41,5 +41,25 @@ comments = function() {
         }
     }
 }
+// guessing function
+result = function () {
+    wordHolder = document.getElementById('hold');
+    correct = document.createElement('ul');
 
+    for (var i = 0; i < word.length; i++) {
+      correct.setAttribute('id', 'my-word');
+      guess = document.createElement('li');
+      guess.setAttribute('class', 'guess');
+      if (word[i] === "-") {
+        guess.innerHTML = "-";
+        space = 1;
+      } else {
+        guess.innerHTML = "_";
+      }
+
+      geusses.push(guess);
+      wordHolder.appendChild(correct);
+      correct.appendChild(guess);
+    }
+  }
 }
