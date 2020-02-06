@@ -190,9 +190,9 @@ window.onload = function () {
 
       play = function() {
           categories = [
-              ["Rictusempra", "Morsmordre", "Sectumsempra", "Crucio"],
-              ["Severus Snape", "Hermione Granger", "Lord Voldemort", "Dobby the House Elf", "Albus Dumblefore"],
-              ["Niffler", "Merperson", "Baslisk", "Acromantula", "Thestral", "Hippogriff"]
+              ["rictusempra", "morsmordre", "sectumsempra", "crucio"],
+              ["severus snape", "hermione granger", "lord voldemort", "Dobby the House Elf", "Albus Dumblefore"],
+              ["niffler", "merperson", "baslisk", "acromantula", "thestral", "hippogriff"]
         ];
 //create function to randomely select category word and replace with dashes
         chosenCategory = categories[Math.floor(Math.random() * categories.length)];
@@ -212,7 +212,26 @@ window.onload = function () {
   }
 
   play();
-      }
+
+  //create hint function 
+    getHint.onclick = function() {
+
+        hints = [
+            ["Tickle Tickle", "Summon the Dark Mark", "Harry F** Malfoy up with this", "TORTURE SPELL"],
+            ["Mr. Always", "The real reason for Harry's succes", "Where's this guys nose?", "Give him a sock and he'll be loyal for life", "His favorite candy is lemon drops"],
+            ["Ooo shiny", "Come seek us where our voices sound, We cannot sing above the ground", "It's fang can destroy horcrux",
+        "Everyone though this is what was petrifying students", "Only visible when your soul has been tainted by death", "Nearly lost his head because of Malfoy's b*ass"]
+        ];
+
+        //create function to show clue
+
+        var catagoryIndex = categories.indexOf(chosenCategory);
+    var hintIndex = chosenCategory.indexOf(word);
+    showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+  };
+
+    }
+
       
     
          
