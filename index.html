@@ -2,51 +2,63 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wizards Hangman</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Henny+Penny&display=swap" rel="stylesheet">
-        
-    
-    </head>
-    <body> 
-        <audio controls autoplay> <source src="Double Trouble.mp3" type="audio/mpeg"></audio>
-     <div class="background"></div>    
-        <div class="wrapper">
-            <h1>Wizards Hangman</h1>
-             <h2>Test your Wizarding Knowledge</h2>
-             <p>Use the alphabet below to guess the word, or click "Need a Clue?" to get a clue. </p>
-         </div>
-        
-         <div class="row">
-            <div class="side">
-             <div id="buttons">
-             </div>  
-            </div>
-             
-             <div class="main">
-                <p id="catagoryName"></p>
-                <div id="hold">
-                </div>
-                <p id="mylives"></p>
-                 <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
-             </div>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Wizards Hangman</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Henny+Penny&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio controls autoplay>
+      <source src="Double Trouble.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="background"></div>
+    <div class="wrapper">
+      <h1>Wizards Hangman</h1>
+      <h2>Test your Wizarding Knowledge</h2>
+      <p>
+        Use the alphabet below to guess the word, or click "Need a Clue?" to get
+        a clue.
+      </p>
+    </div>
 
-              <div class="container">
-               <p id="clue">Clue -</p> 
-               <button id="hint">Need A Clue?</button>
-               <button id="reset">Again!</button>
-              
-             </div>
-         </div>
-         
-        
-        <script type="text/javascript" src="script.js"></script>
-    </body>
+    <div class="row">
+      <div class="side">
+        <div id="buttons"></div>
+      </div>
+
+      <div class="main">
+        <p id="catagoryName"></p>
+        <div id="hold"></div>
+        <p id="mylives"></p>
+        <canvas id="stickman"
+          >This Text will show if the Browser does NOT support HTML5 Canvas
+          tag</canvas
+        >
+      </div>
+
+      <div class="container">
+        <p id="clue">Clue -</p>
+        <button id="hint">Need A Clue?</button>
+        <button id="reset">Again!</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

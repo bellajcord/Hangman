@@ -152,13 +152,5 @@ li.active {
         padding: 0 10px;
         font-size:1.6em;
       }
-      .active {
-        @include opacity;
-        cursor:default;
-          
-        &:hover{
-            @include fade;
-            @include opacity;
-          }
-      }
+      
 
