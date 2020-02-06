@@ -61,6 +61,7 @@ h1, h2, p {
     height: 30px;
     padding-top: 5px;
     border: solid 1px;
+    cursor: pointer;
 }
 
 #buttons {
@@ -71,6 +72,12 @@ h1, h2, p {
         padding: 0 0 0 15px;
     }
 }
+
+@media (max-width: 480px) {
+    #alphabet {
+    padding:0 0 0 25px;
+  }
+    }
 
 canvas{
     color: whitesmoke;
@@ -140,4 +147,13 @@ canvas{
         display: inline-block;
         padding: 0 10px;
         font-size:1.6em;
+      }
+      .active {
+        @include opacity;
+        cursor:default;
+          
+        &:hover{
+            @include fade;
+            @include opacity;
+          }
       }

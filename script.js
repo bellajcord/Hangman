@@ -162,4 +162,31 @@ window.onload = function () {
     };
 
     drawArray =[rightLeg, leftLeg, rightArm, leftArm, torso, head, frame4, frame3, frame2, frame1];
+
+//guessing count function linked to lives
+    check = function () {
+        list.onclick = function () {
+          var geuss = (this.innerHTML);
+          this.setAttribute("class", "active");
+          this.onclick = null;
+          for (var i = 0; i < word.length; i++) {
+            if (word[i] === geuss) {
+              geusses[i].innerHTML = geuss;
+              counter += 1;
+            } 
+          }
+          var j = (word.indexOf(geuss));
+          if (j === -1) {
+            lives -= 1;
+            comments();
+            animate();
+          } else {
+            comments();
+          }
+        }
+      }
+      
+        
+      
     
+         
