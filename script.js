@@ -186,7 +186,33 @@ window.onload = function () {
         }
       }
       
-        
+    //set category words
+
+      play = function() {
+          categories = [
+              ["Rictusempra", "Morsmordre", "Sectumsempra", "Crucio"],
+              ["Severus Snape", "Hermione Granger", "Lord Voldemort", "Dobby the House Elf", "Albus Dumblefore"],
+              ["Niffler", "Merperson", "Baslisk", "Acromantula", "Thestral", "Hippogriff"]
+        ];
+//create function to randomely select category word and replace with dashes
+        chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+    word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+    word = word.replace(/\s/g, "-");
+    console.log(word);
+    buttons();
+
+    geusses = [ ];
+    lives = 10;
+    counter = 0;
+    space = 0;
+    result();
+    comments();
+    selectCat();
+    canvas();
+  }
+
+  play();
+      }
       
     
          
