@@ -117,9 +117,13 @@ canvas{
     
     }
   
-.letter:hover  {
+li:hover  {
     background-color: black;
     color:white;
+}
+li.active {
+    background-color: black;
+    color: white;
 }
 
     #mylives{
@@ -157,3 +161,4 @@ canvas{
             @include opacity;
           }
       }
+

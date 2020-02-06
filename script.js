@@ -98,7 +98,7 @@ window.onload = function () {
       myStickman = document.getElementById("stickman");
       context = myStickman.getContext('2d');
       context.beginPath();
-      context.strokeStyle = "#fff";
+      context.strokeStyle = "#000";
       context.lineWidth = 2;
     };
     
@@ -184,7 +184,7 @@ window.onload = function () {
     play = function () {
       categories = [
           ["rictusempra", "morsmordre", "sectumsempra", "crucio"],
-          ["severus snape", "hermione granger", "lord voldemort", "Dobby the House Elf", "Albus Dumblefore"],
+          ["severus snape", "hermione granger", "lord voldemort", "dobby the house elf", "albus dumblefore"],
           ["niffler", "merperson", "baslisk", "acromantula", "thestral", "hippogriff"]
       ];
   
