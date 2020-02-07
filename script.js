@@ -213,11 +213,11 @@ window.onload = function() {
     categories = [
       ["rictusempra", "morsmordre", "sectumsempra", "crucio"],
       [
-        "severus snape",
-        "hermione granger",
-        "lord voldemort",
-        "dobby the house elf",
-        "albus dumblefore"
+        "severus-snape",
+        "hermione-granger",
+        "lord-voldemort",
+        "dobby-the-house-elf",
+        "albus-dumbledore"
       ],
       [
         "niffler",
@@ -227,11 +227,14 @@ window.onload = function() {
         "thestral",
         "hippogriff"
       ]
+      
     ];
 
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+    console.log(chosenCategory)
     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-    word = word.replace(/\s/g, "-");
+    console.log(word);
+    //let newWord = word.replace(/\s/g, "-");
     console.log(word);
     buttons();
 
@@ -276,6 +279,7 @@ window.onload = function() {
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
+    console.log(hintIndex)
     showClue.innerHTML = "Clue: - " + hints[catagoryIndex][hintIndex];
   };
 
