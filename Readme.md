@@ -13,3 +13,4 @@
 The goal of this project was to use our skills in HTML, CSS and JavaScript to create a game that required manipulation of the DOM. I chose a themed game of Hangman based on the Wizarding world of Harry Potter. 
 
 ![Wireframe](/image/image 2-7-20 at 10.50 AM.jpg)
+
