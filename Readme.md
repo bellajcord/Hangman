@@ -12,6 +12,13 @@
 
 The goal of this project was to use our skills in HTML, CSS and JavaScript to create a game that required manipulation of the DOM. I chose a themed game of Hangman based on the Wizarding world of Harry Potter. 
 
+## Technology Used
+
+* Languages- HTML5, CSS3, JavaScript, jQuery
+* Design- Google Fonts, draw.io, wireframe cc
+* Project Planning- Trello
+* Visual Studio Code
+
 Wireframe:
 ![alt text](wireframe.jpg)
 
