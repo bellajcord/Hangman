@@ -234,7 +234,6 @@ window.onload = function() {
     console.log(chosenCategory)
     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
     console.log(word);
-    //let newWord = word.replace(/\s/g, "-");
     console.log(word);
     buttons();
 
@@ -250,7 +249,7 @@ window.onload = function() {
 
   play();
 
-  // Hint
+  // Hint array linked to words
 
   hint.onclick = function() {
     hints = [
@@ -283,7 +282,7 @@ window.onload = function() {
     showClue.innerHTML = "Clue: - " + hints[catagoryIndex][hintIndex];
   };
 
-  // Reset
+  // Reset game 
 
   document.getElementById("reset").onclick = function() {
     correct.parentNode.removeChild(correct);
