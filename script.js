@@ -45,11 +45,11 @@ window.onload = function() {
   var getHint = document.getElementById("hint");
   var showClue = document.getElementById("clue");
 
-  // create alphabet ul
+  // create alphabet selector
   var buttons = function() {
     myButtons = document.getElementById("buttons");
     letters = document.createElement("ul");
-
+    //use a for loop to create and append to parent
     for (var i = 0; i < alphabet.length; i++) {
       letters.id = "alphabet";
       list = document.createElement("li");
@@ -107,7 +107,7 @@ window.onload = function() {
     }
   };
 
-  // Animate man
+  // begin function to draw the hangman
   var animate = function() {
     var drawMe = lives;
     drawArray[drawMe]();
@@ -171,7 +171,7 @@ window.onload = function() {
   leftLeg = function() {
     draw(60, 70, 20, 100);
   };
-
+  // create array of order to draw
   drawArray = [
     rightLeg,
     leftLeg,
@@ -185,7 +185,7 @@ window.onload = function() {
     frame1
   ];
 
-  // OnClick Function
+  // Link letter guesses together with words and lives
   check = function() {
     list.onclick = function() {
       var geuss = this.innerHTML;
@@ -208,7 +208,7 @@ window.onload = function() {
     };
   };
 
-  // Play
+  // cdefine the words within each category
   play = function() {
     categories = [
       ["rictusempra", "morsmordre", "sectumsempra", "crucio"],
@@ -227,11 +227,10 @@ window.onload = function() {
         "thestral",
         "hippogriff"
       ]
-      
     ];
-
+    //chose category and word at random
     chosenCategory = categories[Math.floor(Math.random() * categories.length)];
-    console.log(chosenCategory)
+    console.log(chosenCategory);
     word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
     console.log(word);
     console.log(word);
@@ -278,11 +277,11 @@ window.onload = function() {
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
-    console.log(hintIndex)
+    console.log(hintIndex);
     showClue.innerHTML = "Clue: - " + hints[catagoryIndex][hintIndex];
   };
 
-  // Reset game 
+  // Reset game
 
   document.getElementById("reset").onclick = function() {
     correct.parentNode.removeChild(correct);
